@@ -1,4 +1,5 @@
 DB Scheme :
+
 ![DB Scheme](db_images/car-trip.drawio.png)
 
 Car Table :
