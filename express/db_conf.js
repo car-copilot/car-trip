@@ -13,7 +13,7 @@ const pool = new Pool({
 const getTripsName = async () => {
     try {
         return await new Promise(function (resolve, reject) {
-        pool.query("SELECT * FROM car, trip WHERE trip.car_id = car.car_id", (error, results) => {
+        pool.query("SELECT * FROM car, trip, owners WHERE trip.car_id = car.car_id AND trip.owner_id = owners.owner_id", (error, results) => {
             if (error) {
             reject(error);
             }
